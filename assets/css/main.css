@@ -1275,6 +1275,10 @@ footer ul > li > a:hover {
   .gallery_slider img {
     height: 90px;
   }
+
+  .detailDropdown .listingSelect {
+    width: 100%;
+  }
 }
 
 /* min */

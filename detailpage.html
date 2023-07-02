@@ -36,6 +36,7 @@
     <link rel="stylesheet" href="assets/js/lightboxed/lightboxed.css" />
     <link rel="stylesheet" href="assets/css/nice-select.css" />
     <link rel="stylesheet" href="assets/css/megamenu.css" />
+    <link rel="stylesheet" href="assets/css/drawer.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
   </head>
 
@@ -155,7 +156,7 @@
             </a>
           </div>
 
-          <button class="flex items-center gap-1 hover:text-primary">
+          <button class="hidden md:flex items-center gap-1 hover:text-primary">
             <i class="fa-regular fa-heart"></i>
             <span> Wishlist</span>
           </button>
@@ -235,12 +236,22 @@
               </div>
               <div class="detailDropdown mb-4">
                 <label class="block mb-2 text-sm">Please select an activity date</label>
-                <div class="relative date-picker" id="datepicker">
-                  <div class="dateinput" id="dateinput">
-                    <div class="dateresult"><span>Check Availability</span></div>
-                  </div>
-                  <div class="calendar" id="calendar"></div>
-                </div>
+                <div class="flex flex-wrap sm:flex-nowrap items-center gap-2 w-full xs:w-1/2">
+                <button
+                class="text-sm xs:text-base w-full bg-secondary hover:bg-primary transition-all ease-in-out duration-300 text-white font-light px-12 py-3 rounded-lg whitespace-nowrap"
+              >
+              <div class="flex items-center justify-center gap-2">
+              <span><i class="fa-regular fa-calendar-days"></i></span>
+              <span>Check availability</span>
+              </button>
+              <button
+              class="text-sm xs:text-base w-full bg-secondary hover:bg-primary transition-all ease-in-out duration-300 text-white font-light px-12 py-3 rounded-lg whitespace-nowrap"
+            >
+            <div class="flex items-center justify-center gap-2">
+            <span><i class="fa-regular fa-calendar-days"></i></span>
+            <span>16 june, 2023</span>
+            </button>
+            </div>
               </div>
               <div class="detailDropdown mb-4">
                 <label class="block mb-2 text-sm">Please select a time</label>
@@ -292,7 +303,7 @@
             
               </div>
 
-              <div class="mt-4 lg:mt-8 flex flex-wrap gap-4 justify-between items-center">
+              <div class="hidden mt-4 lg:mt-8 md:flex flex-wrap gap-4 justify-between items-center">
                 <div>
                     <div class="price text-2xl font-bold">AED 340.40</div>
                     <p>Complete all required fields to continue</p>
@@ -858,6 +869,31 @@
         <!-- ====== Footer Section End -->
       </div>
     </div>
+
+    <div class="block md:hidden fixed bottom-0 left-0 right-0 bg-white border-t px-4 py-2">
+      <div class="flex items-center justify-between gap-2">
+        <div class="flex-1">
+          <div class="price text-2xl font-bold">AED 340.40</div>
+          <p class="mb-2 text-xs xs:text-sm">Complete all required fields to continue</p>
+      </div>
+        <button class="flex items-center gap-1 hover:text-primary">
+          <i class="fa-regular fa-heart"></i>
+          <span> Wishlist</span>
+        </button>
+      </div>
+    <div class="grid grid-cols-2 xs:flex items-center gap-2">
+        <button
+    class="text-sm xs:text-base w-full bg-bluelight hover:bg-primary transition-all ease-in-out duration-300 text-white font-light px-12 py-3 rounded-lg whitespace-nowrap"
+  >
+    Add to Cart
+  </button>
+  <button
+    class="text-sm xs:text-base w-full bg-secondary hover:bg-primary transition-all ease-in-out duration-300 text-white font-light px-12 py-3 rounded-lg whitespace-nowrap"
+  >
+    Book Now
+  </button>
+    </div>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
@@ -865,6 +901,7 @@
     <script src="assets/js/lightboxed/lightboxed.js"></script>
     <script src="assets/js/jquery.nice-select.js"></script>
     <script src="assets/js/megamenu.js"></script>
+    <script src="assets/js/drawer.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
       $("select").niceSelect();

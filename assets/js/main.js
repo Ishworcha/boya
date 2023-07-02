@@ -220,37 +220,7 @@ $(function () {
   $("#priceRange").val("AED " + $("#price-range").slider("values", 0) + " - AED " + $("#price-range").slider("values", 1) + "+");
 });
 
-// dropdown
-
-// function show(value) {
-//   document.querySelector(".text-box").value = value;
-// }
-
-// let dropdowns = document.querySelectorAll(".filterdropdown");
-// let body = document.querySelector("body");
-// let activeDropdown = null;
-
-// for (let i = 0; i < dropdowns.length; i++) {
-//   dropdowns[i].onclick = function () {
-//     if (activeDropdown === this) {
-//       this.classList.remove("active");
-//       activeDropdown = null;
-//     } else {
-//       if (activeDropdown) {
-//         activeDropdown.classList.remove("active");
-//       }
-//       this.classList.add("active");
-//       activeDropdown = this;
-//     }
-//   };
-// }
-
-// body.onclick = function (event) {
-//   if (activeDropdown && !activeDropdown.contains(event.target)) {
-//     activeDropdown.classList.remove("active");
-//     activeDropdown = null;
-//   }
-// };
+$(".drawer").drawer();
 
 jQuery('#showWholeLightboxButton').click(function () {
   // Trigger the lightbox to show

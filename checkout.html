@@ -35,6 +35,7 @@
     />
     <link rel="stylesheet" href="assets/js/lightboxed/lightboxed.css" />
     <link rel="stylesheet" href="assets/css/megamenu.css" />
+    <link rel="stylesheet" href="assets/css/drawer.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
   </head>
 
@@ -317,9 +318,9 @@
             </div>
           </div>
 
-          <div class="lg:col-span-2">
+          <div class="hidden lg:block lg:col-span-2">
             <div
-              class="sticky top-22 p-9 px-6 border border-gray-400 rounded-xl"
+              class="md:sticky md:top-22 p-9 px-6 border border-gray-400 rounded-xl"
             >
               <div class="grid grid-cols-2 gap-2">
                 <h4 class="text-xl mt-4">Parasailing Adventure in Dubai</h4>
@@ -365,10 +366,21 @@
                 <h3 class="text-xl text-secondary font-semibold">AED 340</h3>
               </div>
               <div>
-                <p class="mt-2 mb-8">
-                  By clicking 'Confirm & pay' you agree to our general terms and
-                  privacy policy
-                </p>
+                <div class="pl-4 mt-2 mb-8">
+                  <input
+                    class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none border-[0.125rem] border-solid border-neutral-300 outline-none checked:border-primary checked:bg-primary checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer focus:shadow-none focus:transition-[border-color_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent"
+                    type="checkbox"
+                    value=""
+                    id="checkboxDefault"
+                  />
+                  <label
+                    class="inline-block pl-4 hover:cursor-pointer"
+                    for="checkboxDefault"
+                  >
+                    By clicking 'Confirm & pay' you agree to our general terms
+                    and privacy policy
+                  </label>
+                </div>
                 <button
                   class="w-full bg-secondary hover:bg-primary transition-all ease-in-out duration-300 text-white font-light px-12 py-3 rounded-lg"
                 >
@@ -538,12 +550,101 @@
         <!-- ====== Footer Section End -->
       </div>
     </div>
+    <div
+      class="block lg:hidden bg-white border-t fixed bottom-0 left-0 right-0 py-2 px-4"
+    >
+      <div class="flex justify-between items-center pb-2 border-b">
+        <button
+          type="button"
+          class="block lg:hidden drawer-toggle flex items-center bg-primary text-white px-4 rounded-lg h-[42px] line-height-[40px]"
+        >
+          <span class="text-base whitespace-nowrap">View Summary</span>
+        </button>
+        <div class="flex items-center gap-1">
+          <h3 class="text-base xs:text-xl text-secondary font-semibold">
+            Total Payable:
+          </h3>
+          <h3 class="text-base xs:text-xl text-secondary font-semibold">
+            AED 340
+          </h3>
+        </div>
+      </div>
+      <div>
+        <div class="pl-4 my-2">
+          <input
+            class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none border-[0.125rem] border-solid border-neutral-300 outline-none checked:border-primary checked:bg-primary checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer focus:shadow-none focus:transition-[border-color_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent"
+            type="checkbox"
+            value=""
+            id="checkboxDefault"
+          />
+          <label
+            class="text-sm sm:text-base inline-block pl-4 hover:cursor-pointer"
+            for="checkboxDefault"
+          >
+            By clicking 'Confirm & pay' you agree to our general terms and
+            privacy policy
+          </label>
+        </div>
+        <button
+          class="w-full bg-secondary hover:bg-primary transition-all ease-in-out duration-300 text-white font-light px-12 py-3 rounded-lg"
+        >
+          Confirm & Pay
+        </button>
+      </div>
+    </div>
+
+    <div>
+      <div class="drawer drawer--right">
+        <div class="drawer-nav">
+          <img
+            src="./assets/images/detailimg/bright-baloon-color-colorful-heat.jpg"
+            alt="Product Image"
+            class="rounded-lg"
+          />
+          <h4 class="text-xl mt-4">Parasailing Adventure in Dubai</h4>
+          <div
+            class="mt-4 flex flex-wrap justify-between items-center pb-4 border-b gap-2"
+          >
+            <div class="flex items-center gap-2">
+              <span><i class="fa-regular fa-calendar"></i></span>
+              <span class="date">Sat, Jul 15, 2023, 10:00 AM</span>
+            </div>
+            <button class="text-blue-500 hover:text-primary">Modify</button>
+          </div>
+          <div class="pt-4 mb-4">
+            <div class="flex items-center mb-2">
+              <i class="fa-solid fa-check text-green-500"></i>
+              <span class="ml-4">Free Cancellation</span>
+            </div>
+            <div class="flex items-center mb-2">
+              <i class="fa-solid fa-check text-green-500"></i>
+              <span class="ml-4">No additional fees</span>
+            </div>
+          </div>
+          <div class="py-4 flex justify-between items-center border-t border-b">
+            <div class="flex items-center">
+              <span class="passengernumber">1</span>
+              <span><i class="fa-solid fa-xmark text-sm"></i></span>
+              <span class="passandertype">Adult</span>
+            </div>
+            <div class="price">AED 340</div>
+          </div>
+          <div class="flex justify-between items-center py-4 border-b">
+            <h3 class="xs:text-xl text-secondary font-semibold">
+              Total Payable
+            </h3>
+            <h3 class="text-xl text-secondary font-semibold">AED 340</h3>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
     <script src="assets/js/lightboxed/lightboxed.js"></script>
     <script src="assets/js/megamenu.js"></script>
+    <script src="assets/js/drawer.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
       function decreaseCount(countId) {

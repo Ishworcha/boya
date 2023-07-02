@@ -500,57 +500,25 @@
         <div
           class="filterSection flex flex-wrap items-center justify-between gap-4"
         >
-          <div class="flex items-center gap-2">
-            <button
-              type="button"
-              class="block lg:hidden drawer-toggle flex items-center bg-white border py-0.5 px-4 rounded-lg"
-            >
-              <span class="icon-filter mr-1"
-                ><i class="fa-solid fa-filter text-xl"></i
-              ></span>
-              <span class="text-xs">Filter</span>
-            </button>
+          <div class="flex items-center">
             <h2
-              class="font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl text-secondarylight"
+              class="font-semibold text-xl md:text-2xl lg:text-3xl text-secondarylight"
             >
               24 Results Found
             </h2>
           </div>
-          <div class="flex items-center gap-4">
-            <!-- <div class="filterdropdown z-50">
-              <input
-                class="text-box"
-                type="text"
-                placeholder="Pricing Range"
-                readonly
-              />
-              <div class="dropcontent">
-                <div>
-                  <div class="slider-box">
-                    <input
-                      type="text"
-                      id="priceRange"
-                      readonly
-                      class="text-sm uppercase"
-                    />
-                    <div id="price-range" class="slider mt-4"></div>
-                  </div>
-
-                  <div class="mt-8 flex justify-end items-center gap-4">
-                    <button
-                      class="text-primary font-semibold hover:text-secondary"
-                    >
-                      Reset
-                    </button>
-                    <button
-                      class="flex justify-center items-center w-22 h-9 bg-primary transition-all ease-in-out duration-300 border border-primary hover:border-0 rounded-customsm text-white hover:bg-secondary hover:border-secondary"
-                    >
-                      Ok
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div> -->
+          <div
+            class="w-full md:w-auto flex justify-between lg:justify-normal items-center gap-4"
+          >
+            <button
+              type="button"
+              class="block md:hidden drawer-toggle flex items-center bg-white border border-[##e5e7eb] px-4 rounded-xl h-[42px] line-height-[40px]"
+            >
+              <span class="icon-filter mr-1"
+                ><i class="fa-solid fa-filter text-base"></i
+              ></span>
+              <span class="text-base">Filter</span>
+            </button>
             <div class="hidden md:block relative listingSelect">
               <button id="dropdownToggle1" class="listingdropdownbtn text-base">
                 <span class="font-bold dropdowntitle">Pricing Range</span>
@@ -1794,6 +1762,12 @@
           </div>
         </footer>
         <!-- ====== Footer Section End -->
+      </div>
+    </div>
+
+    <div class="drawer drawer--right">
+      <div class="drawer-nav">
+        <h2 class="text-xl lg:text-2xl">Price Range</h2>
       </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
