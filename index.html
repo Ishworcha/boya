@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home — Boya</title>
+    <link rel="shortcut icon" type="image/jpg" href="favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/tailwind.config.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/nice-select.css" />
+    <link rel="stylesheet" href="assets/css/megamenu.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+
+  <body class="homepageWrapper">
+    <header>
+      <nav class="w-full fixed py-2 z-50 navbar-bg border-b" id="navbar">
+        <div class="container">
+          <div class="flex items-center justify-between">
+            <a
+              href="/"
+              class="block items-center logoText text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
+            >
+              BOYA
+            </a>
+
+            <div class="searchWrapper ml-16">
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    ></path>
+                  </svg>
+                </div>
+                <input
+                  type="text"
+                  id="input-group-1"
+                  class="bg-gray-300 text-gray-900 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full sm:w-[354px] pl-10 p-2.5"
+                  placeholder="Search activities or location"
+                />
+              </div>
+            </div>
+            <ul class="flex-1 flex items-center justify-end space-x-4">
+              <li>
+                <a href="#" class="nav-link">Activities</a>
+              </li>
+              <li>
+                <a href="#" class="nav-link">Login</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="slick-slider">
+        <div class="slide-item">
+          <div class="relative">
+            <div class="relative overflow-hidden video-container">
+              <video
+                src="./assets/images/banner-vid.mp4"
+                autoplay
+                loop
+                muted
+                class="w-full h-[450px] xl:h-[700px]"
+              ></video>
+              <div
+                class="absolute top-0 left-0 w-full h-full bg-black opacity-50"
+              ></div>
+            </div>
+            <div
+              class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center"
+            >
+              <h1
+                class="headerText text-white font-bold text-4xl md:text-4xl xl:text-6xl uppercase"
+              >
+                Book <br />
+                <span
+                  class="h1Second text-4xl md:text-4xl xl:text-6xl font-extralight mb-5 whitespace-nowrap"
+                  >Your Activities</span
+                >
+              </h1>
+              <p
+                class="headerP text-white text-sm xl:text-xl whitespace-nowrap"
+              >
+                Water Sports & Adventure in UAE
+              </p>
+              <button
+                class="bg-primary hover:bg-secondary transition-all ease-in-out duration-300 text-white text-xl font-light px-12 py-2 rounded-customxxl my-6"
+              >
+                <a href="#">Let's go!</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bookNow flex justify-center items-center">
+        <div
+          class="py-4 md:py-0 bookNowMain flex flex-wrap absolute z-10 bg-white rounded-customlg lg:flex justify-between items-center w-[90%] md:w-[650px] xl:w-[755px] h-auto md:h-24"
+        >
+          <div
+            class="bookNowLeft px-4 md:px-10 md:py-6 w-full md:w-auto md:flex-1 xl:w-[600px]"
+          >
+            <div class="search_dropdown search-category">
+              <label for="categoryselect" class="flex items-center font-bold"
+                ><span class="hidden md:block">Select&nbsp;</span>
+                <span>Category</span></label
+              >
+              <select id="categoryselect">
+                <option data-display="Select">Select</option>
+                <option value="1">Item 1</option>
+                <option value="2">Item 2</option>
+                <option value="3">Item 3</option>
+                <option value="4">Item 4</option>
+              </select>
+            </div>
+
+            <div class="search_dropdown search-location">
+              <label for="categoryselect" class="block font-bold"
+                >Location</label
+              >
+              <select id="categoryselect">
+                <option data-display="Select">Select</option>
+                <option value="1">Item 1</option>
+                <option value="2">Item 2</option>
+                <option value="3">Item 3</option>
+                <option value="4">Item 4</option>
+              </select>
+            </div>
+
+            <div class="relative">
+              <button id="dropdownToggle1" class="dropdown text-base">
+                <span class="font-bold dropdowntitle"
+                  >Total Person</span
+                ></button
+              ><br />
+              <span id="totalCount1" class="dropdown-toggle leading-7 text-sm"
+                >Select</span
+              >
+              <div id="dropdownMenu1" class="dropdownlist">
+                <div class="py-2">
+                  <div
+                    class="flex items-center justify-between px-4 py-2 text-sm leading-8 hover:bg-bg_gray focus:outline-none focus:bg-bg_gray"
+                  >
+                    <span>Adults</span>
+                    <div class="flex items-center">
+                      <button
+                        class="text-gray-500 focus:outline-none"
+                        onclick="decreaseCount('adultCount1')"
+                      >
+                        <i class="fa-solid fa-minus-circle"></i>
+                      </button>
+                      <span id="adultCount1" class="mx-2">1</span>
+                      <button
+                        class="text-gray-500 focus:outline-none"
+                        onclick="increaseCount('adultCount1')"
+                      >
+                        <i class="fa-solid fa-plus-circle"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="flex items-center justify-between px-4 py-2 text-sm leading-8 hover:bg-bg_gray focus:outline-none focus:bg-bg_gray"
+                  >
+                    <span>Children</span>
+                    <div class="flex items-center">
+                      <button
+                        class="text-gray-500 focus:outline-none"
+                        onclick="decreaseCount('childCount1')"
+                      >
+                        <i class="fa-solid fa-minus-circle"></i>
+                      </button>
+                      <span id="childCount1" class="mx-2">0</span>
+                      <button
+                        class="text-gray-500 focus:outline-none"
+                        onclick="increaseCount('childCount1')"
+                      >
+                        <i class="fa-solid fa-plus-circle"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a
+            href=""
+            class="mt-4 md:mt-0 w-full md:w-auto flex items-center justify-center"
+          >
+            <div
+              class="bookNowRight text-white hover:text-secondary transition-all ease-in-out duration-300"
+            >
+              <i
+                class="hidden md:block fa-solid fa-calendar-days fa-xl pt-2"
+              ></i>
+              <p class="bookNowText text-sm">Book Now</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div class="discoverSport pt-28 pb-12 md:pt-32 md:pb-16 lg:pt-36 lg:pb-20">
+      <div class="container">
+        <div
+          class="discoverSportsHeader flex justify-between items-center pb-4 lg:pb-8 xl:pb-11"
+        >
+          <h2
+            class="font-bold text-2xl md:text-3xl lg:text-4xl xl:text-5xl lg:leading-[54px] text-secondary lg:max-w-2xl md:max-w-sm max-w-[12rem]"
+          >
+            Discover Your Favorite Sports
+          </h2>
+          <div class="hidden sm:inline-block">
+            <a
+              href=""
+              class="prev-arrow text-dark_gray hover:text-white transition-all ease-in-out duration-300"
+              ><i
+                class="fa-solid fa-chevron-left text-xs md:text-xl lg:text-2xl"
+              ></i
+            ></a>
+            <a
+              href=""
+              class="next-arrow text-dark_gray hover:text-white transition-all ease-in-out duration-300"
+              ><i
+                class="fa-solid fa-chevron-right text-xs md:text-xl lg:text-2xl"
+              ></i
+            ></a>
+          </div>
+        </div>
+        <div id="sportSlider" class="flex justify-center items-center">
+          <div>
+            <div class="w-full">
+              <a
+                href="#"
+                class="block sportSlide-item w-full h-auto mb-4 md:mb-8 lg:mb-10 rounded-xl"
+              >
+                <img
+                  src="https://img.freepik.com/free-photo/couple-having-fun-water-scooter-summer-sea-activity_285396-2816.jpg"
+                  class="object-contain transition-all ease-in-out duration-300 hover:scale-110"
+                  alt=""
+                />
+              </a>
+              <div>
+                <div class="flex justify-between items-start leading-10 gap-2">
+                  <div class="flex-1">
+                    <h3
+                      class="font-semibold text-lg md:text-xl lg:text-2xl text-secondary line-clamp-2"
+                    >
+                      Jet Ski
+                    </h3>
+                  </div>
+                  <div>
+                    <h3
+                      class="font-semibold text-lg md:text-xl lg:text-2xl text-secondary"
+                    >
+                      AED 99
+                    </h3>
+                  </div>
+                </div>
+                <div class="flex justify-between items-center">
+                  <div
+                    class="font-normal text-sm text-zinc-400 h-full leading-6"
+                  >
+                    <div class="inline-flex justify-center items-center">
+                      <i
+                        class="hidden mr-0.5 sm:block fa-solid fa-location-dot"
+                      ></i>
+                      <span>Jumeirah Beach, Dubai</span>
+                    </div>
+                    <div class="text-primary">
+                      <i class="fa-solid fa-star text-xs"></i>
+                      <i class="fa-solid fa-star text-xs"></i>
+                      <i class="fa-solid fa-star text-xs"></i>
+                      <i class="fa-solid fa-star text-xs"></i>
+                      <i class="fa-solid fa-star text-xs"></i>
+                    </div>
+                  </div>
+                  <button
+                    class="flex justify-center items-center w-22 h-9 bg-white outline-text_gray transition-all ease-in-out duration-300 border hover:border-0 rounded-customsm text-secondary hover:bg-primary hover:text-white"
+                  >
+                    <a href="" class="font-medium">Book</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="w-full">
+              <a
+                href="#"
+                class="block sportSlide-item w-full h-auto mb-4 md:mb-8 lg:mb-10 rounded-xl"
+              >
+                <img
+                  src="https://img.freepik.com/free-photo/women-stretching-paddleboard-full-shot_23-2149643040.jpg"
+                  class="object-contain transition-all ease-in-out duration-300 hover:scale-110"
+                  alt=""
+                />
+              </a>
+              <div>
+                <div class="flex justify-between items-start leading-10 gap-2">
+                  <div class="flex-1">
+                    <h3
+                      class="font-semibold text-lg md:text-xl lg:text-2xl text-secondary line-clamp-2"
+                    >
+                      Jet Ski
+                    </h3>
+                  </div>
+                  <div>
+                    <h3
+                      class="font-semibold text-lg md:text-xl lg:text-2xl text-secondary"
+                    >
+                      AED 99
+                    </h3>
+                  </div>
+                </div>
+                <div class="flex justify-between items-center">
+                  <div
+                    class="font-normal text-sm text-zinc-400 h-full leading-6"
+                  >
+                    <div class="inline-flex justify-center items-center">
+                      <i
+                        class="hidden mr-0.5 sm:block fa-solid fa-location-dot"
+                      ></i>
+                      <h4 class="">Jumeirah Beach, Dubai</h4>
+                    </div>
+                    <div class="text-primary">
+                      <i class="fa-solid fa-star text-xs"></i>
+                      <i class="fa-solid fa-star text-xs"></i>
+                      <i class="fa-solid fa-star text-xs"></i>
+                      <i class="fa-solid fa-star text-xs"></i>
+                      <i class="fa-solid fa-star text-xs"></i>
+                    </div>
+                  </div>
+                  <button
+                    class="flex justify-center items-center w-22 h-9 bg-white outline-text_gray transition-all ease-in-out duration-300 border hover:border-0 rounded-customsm text-secondary hover:bg-primary hover:text-white"
+                  >
+                    <a href="" class="font-medium">Book</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="w-full">
+              <a
+                href="#"
+                class="block sportSlide-item w-full h-auto mb-4 md:mb-8 lg:mb-10 rounded-xl"
+              >
+                <img
+                  src="https://img.freepik.com/free-photo/kayaking-man-paddling-kayak-canoeing-paddling_654080-12.jpg"
+                  class="object-contain transition-all ease-in-out duration-300 hover:scale-110"
+                  alt=""
+                />
+              </a>
+              <div>
+                <div class="flex justify-between items-start leading-10 gap-2">
+                  <div class="flex-1">
+                    <h3
+                      class="font-semibold text-lg md:text-xl lg:text-2xl text-secondary line-clamp-2"
+                    >
+                      Jet Ski
+                    </h3>
+                  </div>
+                  <div>
+                    <h3
+                      class="font-semibold text-lg md:text-xl lg:text-2xl text-secondary"
+                    >
+                      AED 99
+                    </h3>
+                  </div>
+                </div>
+                <div class="flex justify-between items-center">
+                  <div
+                    class="font-normal text-sm text-zinc-400 h-full leading-6"
+                  >
+                    <div class="inline-flex justify-center items-center">
+                      <i
+                        class="hidden mr-0.5 sm:block fa-solid fa-location-dot"
+                      ></i>
+                      <h4 class="">Jumeirah Beach, Dubai</h4>
+                    </div>
+                    <div class="text-primary">
+                      <i class="fa-solid fa-star text-xs"></i>
+                      <i class="fa-solid fa-star text-xs"></i>
+                      <i class="fa-solid fa-star text-xs"></i>
+                      <i class="fa-solid fa-star text-xs"></i>
+                      <i class="fa-solid fa-star text-xs"></i>
+                    </div>
+                  </div>
+                  <button
+                    class="flex justify-center items-center w-22 h-9 bg-white outline-text_gray transition-all ease-in-out duration-300 border hover:border-0 rounded-customsm text-secondary hover:bg-primary hover:text-white"
+                  >
+                    <a href="" class="font-medium">Book</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="w-full">
+              <a
+                href="#"
+                class="block sportSlide-item w-full h-auto mb-4 md:mb-8 lg:mb-10 rounded-xl"
+              >
+                <img
+                  src="https://img.freepik.com/free-photo/beautiful-girl-posing-sitting-surfboard-ocean_72229-743.jpg"
+                  class="object-contain transition-all ease-in-out duration-300 hover:scale-110"
+                  alt=""
+                />
+              </a>
+              <div>
+                <div class="flex justify-between items-start leading-10 gap-2">
+                  <div class="flex-1">
+                    <h3
+                      class="font-semibold text-lg md:text-xl lg:text-2xl text-secondary line-clamp-2"
+                    >
+                      Jet Ski
+                    </h3>
+                  </div>
+                  <div>
+                    <h3
+                      class="font-semibold text-lg md:text-xl lg:text-2xl text-secondary"
+                    >
+                      AED 99
+                    </h3>
+                  </div>
+                </div>
+                <div class="flex justify-between items-center">
+                  <div
+                    class="font-normal text-sm text-zinc-400 h-full leading-6"
+                  >
+                    <div class="inline-flex justify-center items-center">
+                      <i
+                        class="hidden mr-0.5 sm:block fa-solid fa-location-dot"
+                      ></i>
+                      <h4 class="">Jumeirah Beach, Dubai</h4>
+                    </div>
+                    <div class="text-primary">
+                      <i class="fa-solid fa-star text-xs"></i>
+                      <i class="fa-solid fa-star text-xs"></i>
+                      <i class="fa-solid fa-star text-xs"></i>
+                      <i class="fa-solid fa-star text-xs"></i>
+                      <i class="fa-solid fa-star text-xs"></i>
+                    </div>
+                  </div>
+                  <button
+                    class="flex justify-center items-center w-22 h-9 bg-white outline-text_gray transition-all ease-in-out duration-300 border hover:border-0 rounded-customsm text-secondary hover:bg-primary hover:text-white"
+                  >
+                    <a href="" class="font-medium">Book</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="w-full">
+              <a
+                href="#"
+                class="block sportSlide-item w-full h-auto mb-4 md:mb-8 lg:mb-10 rounded-xl"
+              >
+                <img
+                  src="https://img.freepik.com/free-photo/couple-together-kayaking-river_1303-16023.jpg"
+                  class="object-contain transition-all ease-in-out duration-300 hover:scale-110"
+                  alt=""
+                />
+              </a>
+              <div>
+                <div class="flex justify-between items-start leading-10 gap-2">
+                  <div class="flex-1">
+                    <h3
+                      class="font-semibold text-lg md:text-xl lg:text-2xl text-secondary line-clamp-2"
+                    >
+                      Jet Ski
+                    </h3>
+                  </div>
+                  <div>
+                    <h3
+                      class="font-semibold text-lg md:text-xl lg:text-2xl text-secondary"
+                    >
+                      AED 99
+                    </h3>
+                  </div>
+                </div>
+                <div class="flex justify-between items-center">
+                  <div
+                    class="font-normal text-sm text-zinc-400 h-full leading-6"
+                  >
+                    <div class="inline-flex justify-center items-center">
+                      <i
+                        class="hidden mr-0.5 sm:block fa-solid fa-location-dot"
+                      ></i>
+                      <h4 class="">Jumeirah Beach, Dubai</h4>
+                    </div>
+                    <div class="text-primary">
+                      <i class="fa-solid fa-star text-xs"></i>
+                      <i class="fa-solid fa-star text-xs"></i>
+                      <i class="fa-solid fa-star text-xs"></i>
+                      <i class="fa-solid fa-star text-xs"></i>
+                      <i class="fa-solid fa-star text-xs"></i>
+                    </div>
+                  </div>
+                  <button
+                    class="flex justify-center items-center w-22 h-9 bg-white outline-text_gray transition-all ease-in-out duration-300 border hover:border-0 rounded-customsm text-secondary hover:bg-primary hover:text-white"
+                  >
+                    <a href="" class="font-medium">Book</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="chooseUs py-12 md:py-16 lg:py-20">
+      <div class="container">
+        <div
+          class="ChooseUsHeader flex justify-between items-center pb-4 lg:pb-8 xl:pb-11"
+        >
+          <h2
+            class="font-bold text-2xl md:text-3xl lg:text-5xl lg:leading-[54px] text-secondary lg:max-w-2xl max-w-xs"
+          >
+            Why must Choose us
+          </h2>
+        </div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 lg:gap-10"
+        >
+          <div
+            class="chooseUsCard relative lg:h-72 rounded-customlg outline-text_gray border hover:border-0 cursor-pointer"
+          >
+            <div
+              class="cardLine absolute -left-[0.35em] top-20 md:top-12 lg:top-14 w-3 h-1/2 lg:h-40 bg-primary z-10 rounded-customlg"
+            ></div>
+            <div
+              class="px-7 xl:px-10 py-16 space-y-4 flex flex-col shortArrow"
+              id="shortArrow"
+            >
+              <h3
+                class="font-bold text-xl md:text-2xl lg:text-3xl text-secondary leading-tight"
+              >
+                Best Team <br />
+                Best Experience
+              </h3>
+              <p class="font-light text-sm text-zinc-400 leading-normal">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Pellentesque eget facilisis magna.
+              </p>
+              <button>
+                <a href="" class="flex justify-end items-center">
+                  <p
+                    class="moreDetailsTxt text-end font-light text-sm text-primary ease-in-out"
+                  >
+                    More Details
+                  </p>
+                </a>
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="chooseUsCard relative lg:h-72 rounded-customlg outline-text_gray border hover:border-0 cursor-pointer"
+          >
+            <div
+              class="cardLine absolute -left-[0.35em] top-20 md:top-12 lg:top-14 w-3 h-1/2 lg:h-40 bg-primary z-10 rounded-customlg"
+            ></div>
+            <div
+              class="px-7 xl:px-10 py-16 space-y-4 flex flex-col shortArrow"
+              id="shortArrow"
+            >
+              <h3
+                class="font-bold text-xl md:text-2xl lg:text-3xl text-secondary leading-tight"
+              >
+                Always have <br />
+                Special Tickets
+              </h3>
+              <p class="font-light text-sm text-zinc-400 leading-normal">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Pellentesque eget facilisis magna.
+              </p>
+              <button class="">
+                <a href="" class="flex justify-end items-center">
+                  <p
+                    class="moreDetailsTxt text-end font-light text-sm text-primary ease-in-out"
+                  >
+                    More Details
+                  </p>
+                </a>
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="chooseUsCard relative lg:h-72 rounded-customlg outline-text_gray border hover:border-0 cursor-pointer"
+          >
+            <div
+              class="cardLine absolute -left-[0.35em] top-20 md:top-12 lg:top-14 w-3 h-1/2 lg:h-40 bg-primary z-10 rounded-customlg"
+            ></div>
+            <div
+              class="px-7 xl:px-10 py-16 space-y-4 flex flex-col shortArrow"
+              id="shortArrow"
+            >
+              <h3
+                class="font-bold text-xl md:text-2xl lg:text-3xl text-secondary leading-tight"
+              >
+                Always Ready <br />
+                Support 24/7
+              </h3>
+              <p class="font-light text-sm text-zinc-400 leading-normal">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Pellentesque eget facilisis magna.
+              </p>
+              <button>
+                <a href="" class="flex justify-end items-center">
+                  <p
+                    class="moreDetailsTxt text-end font-light text-sm text-primary ease-in-out"
+                  >
+                    More Details
+                  </p>
+                </a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="orange h-80 bg-primary opacity-10"></div>
+    <div class="relative">
+      <div class="explore py-12 md:py-16 lg:py-20 relative">
+        <div class="container">
+          <div
+            class="exploreHeader flex justify-between items-center pb-4 md:pb-8 lg:pb-10 xl:pb-20"
+          >
+            <h2
+              class="font-bold text-2xl md:text-3xl lg:text-5xl lg:leading-[54px] text-secondary lg:max-w-2xl max-w-xs"
+            >
+              Explore Top Place
+            </h2>
+          </div>
+
+          <div class="md:mx-8 mx-auto">
+            <div
+              id="filters"
+              class="mb-10 flex sm:flex-wrap items-center gap-2 overflow-x-auto sm:overflow-hidden"
+            >
+              <button
+                class="bg-primary text-white text-sm md:text-md h-9 xs:w-auto min-w-[140px] px-4 rounded-customxxl flex justify-center items-center transition-all ease-in-out duration-300 hover:bg-white hover:text-primary hover:outline-text_gray hover:border whitespace-nowrap"
+                data-filter="*"
+              >
+                <p>All Emirates</p>
+              </button>
+              <button
+                class="bg-white text-primary text-sm md:text-md h-9 xs:w-auto min-w-[140px] px-4 rounded-customxxl flex justify-center items-center transition-all ease-in-out duration-300 outline-text_gray border hover:text-white hover:bg-primary hover:border whitespace-nowrap"
+                filter=".metal"
+              >
+                <p>Dubai</p>
+              </button>
+              <button
+                class="bg-white text-primary text-sm md:text-md h-9 xs:w-auto min-w-[140px] px-4 rounded-customxxl flex justify-center items-center transition-all ease-in-out duration-300 outline-text_gray border hover:text-white hover:bg-primary hover:border whitespace-nowrap"
+                data-filter=".transition"
+              >
+                <p>Abu Dhabi</p>
+              </button>
+              <button
+                class="bg-white text-primary text-sm md:text-md h-9 xs:w-auto min-w-[140px] px-4 rounded-customxxl flex justify-center items-center transition-all ease-in-out duration-300 outline-text_gray border hover:text-white hover:bg-primary hover:border whitespace-nowrap"
+                data-filter=".alkali, .alkaline-earth"
+              >
+                <p>Sharjah</p>
+              </button>
+              <button
+                class="bg-white text-primary text-sm md:text-md h-9 xs:w-auto min-w-[140px] px-4 rounded-customxxl flex justify-center items-center transition-all ease-in-out duration-300 outline-text_gray border hover:text-white hover:bg-primary hover:border whitespace-nowrap"
+                data-filter=":not(.transition)"
+              >
+                <p>Fujairah</p>
+              </button>
+              <button
+                class="bg-white text-primary text-sm md:text-md h-9 xs:w-auto min-w-[140px] px-4 rounded-customxxl flex justify-center items-center transition-all ease-in-out duration-300 outline-text_gray border hover:text-white hover:bg-primary hover:border whitespace-nowrap"
+                data-filter="numberGreaterThan50"
+              >
+                <p>RAK</p>
+              </button>
+              <button
+                class="bg-white text-primary text-sm md:text-md h-9 xs:w-auto min-w-[140px] px-4 rounded-customxxl flex justify-center items-center transition-all ease-in-out duration-300 outline-text_gray border hover:text-white hover:bg-primary hover:border whitespace-nowrap"
+                data-filter="ium"
+              >
+                <p>Ajman</p>
+              </button>
+              <button
+                class="bg-white text-primary text-sm md:text-md h-9 xs:w-auto min-w-[140px] px-4 rounded-customxxl flex justify-center items-center transition-all ease-in-out duration-300 outline-text_gray border hover:text-white hover:bg-primary hover:border whitespace-nowrap"
+                data-filter=".metal:not(.transition)"
+              >
+                <p>UMQ</p>
+              </button>
+            </div>
+          </div>
+
+          <div class="relative flex flex-col justify-center">
+            <div
+              class="columns-3 gap-2 sm:gap-4 lg:gap-8 [column-fill:_balance] box-border mx-auto before:box-inherit after:box-inherit"
+            >
+              <div class="break-inside-avoid" data-category="transition">
+                <div class="exploreCard mb-2 sm:mb-4 lg:mb-5">
+                  <img
+                    src="https://cdn.pixabay.com/photo/2019/05/28/00/13/surfer-4234061_1280.jpg"
+                    class="exploreCard1 object-cover"
+                    alt=""
+                  />
+                  <div class="hidden lg:block overlay">
+                    <div class="text">
+                      <h4 class="font-semibold text-2xl">Jet Ski</h4>
+                      <p class="font-normal text-base whitespace-nowrap">
+                        Dubai Marina, Dubai
+                      </p>
+                      <button
+                        class="w-28 h-10 bg-white rounded-customsm mt-3 text-secondary hover:bg-primary hover:text-white"
+                      >
+                        <a href="">
+                          <h4 class="text-xl font-normal">Book Now</h4>
+                        </a>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="break-inside-avoid">
+                <div class="exploreCard mb-2 sm:mb-4 lg:mb-5">
+                  <img
+                    src="https://abudhabimarine.ae/img/containers/assets/ski-boarding-abu-dhabi-marine-1.jpg/0c79a4744a8fc59bb1654645871b572c.webp"
+                    class="exploreCard2 object-cover"
+                    alt=""
+                  />
+                  <div class="hidden lg:block overlay">
+                    <div class="text">
+                      <h4 class="font-semibold text-2xl">Jet Ski</h4>
+                      <p class="font-normal text-base whitespace-nowrap">
+                        Dubai Marina, Dubai
+                      </p>
+                      <button
+                        class="w-28 h-10 bg-white rounded-customsm mt-3 text-secondary hover:bg-primary hover:text-white"
+                      >
+                        <a href="">
+                          <h4 class="text-xl font-normal">Book Now</h4>
+                        </a>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="break-inside-avoid">
+                <div class="exploreCard mb-2 sm:mb-4 lg:mb-5">
+                  <img
+                    src="https://abudhabimarine.ae/img/containers/assets/efoil-abu-dhabi.jpg/d25dc762bfdb34a5694b53f4dee15977.webp"
+                    class="exploreCard2 object-cover"
+                    alt=""
+                  />
+                  <div class="hidden lg:block overlay">
+                    <div class="text">
+                      <h4 class="font-semibold text-2xl">Jet Ski</h4>
+                      <p class="font-normal text-base whitespace-nowrap">
+                        Dubai Marina, Dubai
+                      </p>
+                      <button
+                        class="w-28 h-10 bg-white rounded-customsm mt-3 text-secondary hover:bg-primary hover:text-white"
+                      >
+                        <a href="">
+                          <h4 class="text-xl font-normal">Book Now</h4>
+                        </a>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="break-inside-avoid">
+                <div class="exploreCard mb-2 sm:mb-4 lg:mb-5">
+                  <img
+                    src="https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1295,h_863/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/o3l53akljywomjjv14be/ParasailingandQuadBikeDayTourfromSharmElSheikh.webp"
+                    class="exploreCard1 object-cover"
+                    alt=""
+                  />
+                  <div class="hidden lg:block overlay">
+                    <div class="text">
+                      <h4 class="font-semibold text-2xl">Jet Ski</h4>
+                      <p class="font-normal text-base whitespace-nowrap">
+                        Dubai Marina, Dubai
+                      </p>
+                      <button
+                        class="w-28 h-10 bg-white rounded-customsm mt-3 text-secondary hover:bg-primary hover:text-white"
+                      >
+                        <a href="">
+                          <h4 class="text-xl font-normal">Book Now</h4>
+                        </a>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="break-inside-avoid">
+                <div class="exploreCard mb-2 sm:mb-4 lg:mb-5">
+                  <img
+                    src="https://abudhabimarine.ae/img/containers/assets/fun-things-to-do-abu-dhabi.JPG/2c4ec0999727407ee240c66849dec710.webp"
+                    class="exploreCard1 object-cover"
+                    alt=""
+                  />
+                  <div class="hidden lg:block overlay">
+                    <div class="text">
+                      <h4 class="font-semibold text-2xl">Jet Ski</h4>
+                      <p class="font-normal text-base whitespace-nowrap">
+                        Dubai Marina, Dubai
+                      </p>
+                      <button
+                        class="w-28 h-10 bg-white rounded-customsm mt-3 text-secondary hover:bg-primary hover:text-white"
+                      >
+                        <a href="">
+                          <h4 class="text-xl font-normal">Book Now</h4>
+                        </a>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="break-inside-avoid">
+                <div class="exploreCard mb-2 sm:mb-4 lg:mb-5">
+                  <img
+                    src="https://abudhabimarine.ae/img/containers/assets/abu-dhabi-doughnuts-marine-water-sports.jpg/a34c0f8f9f914cbf69404b2e3d19f318.webp"
+                    class="exploreCard2 object-cover"
+                    alt=""
+                  />
+                  <div class="hidden lg:block overlay">
+                    <div class="text">
+                      <h4 class="font-semibold text-2xl">Jet Ski</h4>
+                      <p class="font-normal text-base whitespace-nowrap">
+                        Dubai Marina, Dubai
+                      </p>
+                      <button
+                        class="w-28 h-10 bg-white rounded-customsm mt-3 text-secondary hover:bg-primary hover:text-white"
+                      >
+                        <a href="">
+                          <h4 class="text-xl font-normal">Book Now</h4>
+                        </a>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative">
+      <!-- ====== Footer Section Start -->
+      <footer class="relative z-10 bg-bg_gray pt-20 lg:pt-24 leading-none">
+        <div class="container">
+          <div class="text-xs md:text-md xl:text-lg leading-6">
+            <div class="-mx-4 flex flex-wrap">
+              <div class="px-4 w-full md:w-2/3 lg:w-4/12">
+                <div class="mb-10 w-full">
+                  <div
+                    class="footerBook col-span-2 md:col-span-1 pl-0 xl:pl-20"
+                  >
+                    <h3
+                      class="text-secondary text-lg xl:text-lg font-semibold mb-5 whitespace-nowrap"
+                    >
+                      Book your Activities
+                    </h3>
+                    <ul class="">
+                      <li><a href="">info@bookyouractivities.com</a></li>
+                      <li><a href="">+971 566 922 440</a></li>
+                      <li>
+                        <div class="socialIcons">
+                          <span class="socialCircle"
+                            ><a href=""
+                              ><i class="fa-brands fa-instagram fa-sm"></i></a
+                          ></span>
+                          <span class="socialCircle"
+                            ><a href=""
+                              ><i class="fa-brands fa-linkedin-in fa-sm"></i></a
+                          ></span>
+                          <span class="socialCircle"
+                            ><a href=""
+                              ><i class="fa-brands fa-facebook-f fa-sm"></i></a
+                          ></span>
+                          <span class="socialCircle"
+                            ><a href=""
+                              ><i class="fa-brands fa-twitter fa-sm"></i></a
+                          ></span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="px-4 w-1/2 md:w-1/3 lg:w-2/12">
+                <div class="mb-10 w-full">
+                  <div class="footerAbout">
+                    <h3
+                      class="text-secondary text-lg xl:text-lg font-semibold mb-5"
+                    >
+                      About
+                    </h3>
+                    <ul class="">
+                      <li><a href="">Company</a></li>
+                      <li><a href="">Career</a></li>
+                      <li><a href="">How it works</a></li>
+                      <li><a href="">Partners</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="px-4 w-1/2 md:w-1/3 lg:w-2/12">
+                <div class="mb-10 w-full">
+                  <div class="footerEmirates">
+                    <h3
+                      class="text-secondary text-lg xl:text-lg font-semibold mb-5"
+                    >
+                      Emirates
+                    </h3>
+                    <ul class="">
+                      <li><a href="">Abu Dhabi</a></li>
+                      <li><a href="">Dubai</a></li>
+                      <li><a href="">Sharjah</a></li>
+                      <li><a href="">Ajman</a></li>
+                      <li><a href="">Fujairah</a></li>
+                      <li><a href="">RAK</a></li>
+                      <li><a href="">UMQ</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="px-4 w-1/2 md:w-1/3 lg:w-2/12">
+                <div class="mb-10 w-full">
+                  <div class="footerActivities">
+                    <h3
+                      class="text-secondary text-lg xl:text-lg font-semibold mb-5"
+                    >
+                      Activities
+                    </h3>
+                    <ul class="">
+                      <li><a href="">Kayak </a></li>
+                      <li><a href="">Jet Ski </a></li>
+                      <li><a href="">Sea Walking </a></li>
+                      <li><a href="">Flyboard Flying </a></li>
+                      <li><a href="">Freediving </a></li>
+                      <li><a href="">Snuba Diving</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="px-4 w-1/2 md:w-1/3 lg:w-2/12">
+                <div class="mb-10 w-full">
+                  <div class="footerLegal">
+                    <h3
+                      class="text-secondary text-lg xl:text-lg font-semibold mb-5"
+                    >
+                      Legal
+                    </h3>
+                    <ul class="lg:whitespace-nowrap">
+                      <li><a href="">Terms & Conditions </a></li>
+                      <li><a href="">Privacy Policy </a></li>
+                      <li><a href="">Cancellation Policy </a></li>
+                      <li><a href="">Refund Policy </a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <section class="relative copyright pb-10">
+            <div class="">
+              <div
+                class="inline-grid grid-cols-1 sm:grid-cols-2 w-full text-secondary mt-5"
+              >
+                <div class="flex items-center justify-center sm:justify-start">
+                  <p class="mb-2 text-center lg:text-left text-xs md:text-md">
+                    Copyright © Boya. All Rights Reserved.
+                  </p>
+                </div>
+                <div class="flex items-center justify-center md:justify-end">
+                  <p
+                    class="flex items-center justify-center text-xs sm:text-md"
+                  >
+                    Designed with
+                    <span class="px-1"
+                      ><i
+                        class="fa-solid fa-heart"
+                        style="color: var(--red)"
+                      ></i
+                    ></span>
+                    <a href="#">Fifth Designs</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </footer>
+      <!-- ====== Footer Section End -->
+      <div class="lastExplore pt-8 absolute z-10 w-full">
+        <div class="container">
+          <div
+            class="bg-primary w-full lg:h-80 h-56 rounded-customlg flex justify-center items-center flex-col"
+          >
+            <h2
+              class="font-bold text-xl md:text-3xl lg:text-5xl lg:leading-[54px] text-white text-center mb-8"
+            >
+              Let's Explore The Beauty<br />
+              of the U.A.E
+            </h2>
+            <button
+              class="bg-white text-secondary h-12 w-40 rounded-customxxl flex justify-center items-center transition-all ease-in-out duration-300 hover:bg-secondary hover:text-white"
+            >
+              <a href="">Get Started</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+    <script src="assets/js/jquery.nice-select.js"></script>
+    <script src="assets/js/megamenu.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

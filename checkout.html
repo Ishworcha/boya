@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout Page</title>
+    <link rel="shortcut icon" type="image/jpg" href="favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Lato:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/tailwind.config.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/js/lightboxed/lightboxed.css" />
+    <link rel="stylesheet" href="assets/css/megamenu.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+
+  <body class="checkoutWrapper">
+    <header>
+      <nav class="w-full relative py-4 z-50 navbar-bg border-b" id="navbar">
+        <div class="container">
+          <div
+            class="flex flex-wrap items-center justify-between gap-2 sm:gap-16"
+          >
+            <a
+              href="/"
+              class="order-first block items-center logoText text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-secondary"
+            >
+              BOYA
+            </a>
+            <div
+              class="sm:flex-1 searchWrapper order-last sm:order-2 w-full sm:w-auto"
+            >
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="w-5 h-5 text-black"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    ></path>
+                  </svg>
+                </div>
+                <input
+                  type="text"
+                  id="input-group-1"
+                  class="bg-gray-100 text-gray-900 text-sm rounded-full focus:ring-secondary focus:border-secondary block w-full w-full md:w-[354px] pl-10 p-2.5"
+                  placeholder="Search activities or location"
+                />
+              </div>
+            </div>
+            <ul class="order-2 sm:order-last flex items-center space-x-4">
+              <li>
+                <a href="#" class="nav-link">Activities</a>
+              </li>
+              <li>
+                <a href="#" class="nav-link">Login</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div
+      class="checkoutWrapper pt-8 md:pt-12 lg:pt-16 pb-8 sm:pb-12 md:pb-16 lg:pb-20 xl:pb-32"
+    >
+      <div class="container">
+        <div class="grid grid-cols-1 lg:grid-cols-6 gap-12 flex-start">
+          <div class="lg:col-span-4">
+            <div class="py-4 px-8 lg:py-5 lg:px-14 bg-primarylight rounded-lg">
+              <p>
+                You can cancel for free until 10:00 AM local time on Jul 14,
+                2023.
+              </p>
+            </div>
+            <div class="mt-4 md:mt-8 lg:mt-14">
+              <h2 class="font-semibold text-2xl md:text-3xl text-secondary">
+                Guests
+              </h2>
+
+              <div>
+                <div
+                  class="bg-white rounded-xl flex items-center justify-between py-4 md:py-8 lg:py-14"
+                >
+                  <div class="flex flex-col">
+                    <span>Adults</span>
+                    <span class="text-xs">Above 4 years</span>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <button
+                      class="flex items-center justify-center bg-gray-200 w-8 h-8 rounded focus:outline-none"
+                      onclick="decreaseCount('childCount1')"
+                    >
+                      <i class="fa-solid fa-minus text-secondary font-bold"></i>
+                    </button>
+                    <span id="childCount1" class="mx-2">0</span>
+                    <button
+                      class="flex items-center justify-center bg-gray-200 w-8 h-8 rounded focus:outline-none"
+                      onclick="increaseCount('childCount1')"
+                    >
+                      <i class="fa-solid fa-plus text-secondary font-bold"></i>
+                    </button>
+                  </div>
+                  <div
+                    class="price text-lg md:text-xl lg:text-2xl font-bold text-secondarylight"
+                  >
+                    AED 340.40
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h2 class="font-semibold text-2xl md:text-3xl text-secondary">
+                  Enter guest details
+                </h2>
+                <p>Booking for a friend? Enter their details</p>
+                <div
+                  class="mt-4 md:mt-8 lg:mt-14 grid sm:grid-cols-2 gap-4 sm:gap-8"
+                >
+                  <div>
+                    <div class="form-title mb-2 sm:mb-4 lg:mb-6">
+                      <h4 class="text-xl">Full Name</h4>
+                      <p class="text-xs">Same as on your ID</p>
+                    </div>
+                    <input
+                      class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      id="fullname"
+                      type="text"
+                      placeholder="Username"
+                    />
+                  </div>
+                  <div>
+                    <div class="form-title mb-2 sm:mb-4 lg:mb-6">
+                      <h4 class="text-xl">Mobile Number</h4>
+                      <p class="text-xs">
+                        We may reach out for booking updates here over
+                        SMS/Whatsapp
+                      </p>
+                    </div>
+                    <input
+                      class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      id="mobile"
+                      type="number"
+                    />
+                  </div>
+                  <div>
+                    <div class="form-title mb-2 sm:mb-4 lg:mb-6">
+                      <h4 class="text-xl">Email</h4>
+                      <p class="text-xs">We'll send your tickets here</p>
+                    </div>
+                    <input
+                      class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      id="email"
+                      type="text"
+                    />
+                  </div>
+                  <div>
+                    <div class="form-title mb-2 sm:mb-4 lg:mb-6">
+                      <h4 class="text-xl">Confirm Email</h4>
+                      <p class="text-xs">Just to ensure we've got this right</p>
+                    </div>
+                    <input
+                      class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      id="confirm-email"
+                      type="text"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="promocode mt-8 lg:mt-11">
+                <button id="promobtn">
+                  <h3 class="text-xl text-green-500">Have a Promo Code?</h3>
+                </button>
+                <div class="mt-2 promobox flex items-center gap-2 hidden">
+                  <input
+                    class="appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="promoinput"
+                    type="text"
+                    placeholder="Username"
+                  />
+                  <button
+                    class="bg-secondary hover:bg-primary transition-all ease-in-out duration-300 text-white font-light px-12 py-2 rounded-lg"
+                  >
+                    Redeem
+                  </button>
+                </div>
+              </div>
+
+              <div class="paymentMethod mt-4 md:mt-8 lg:mt-16">
+                <h2 class="font-semibold text-2xl md:text-3xl text-secondary">
+                  Select your payment option
+                </h2>
+                <p>
+                  We accept any major credit /debit cards, Google & Apply Pay
+                </p>
+                <div class="mt-4 lg:mt-8">
+                  <div class="flex items-center pl-[1.5rem]">
+                    <input
+                      class="relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:opacity-0 after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary"
+                      type="radio"
+                      name="flexRadioDefault"
+                      id="credit-debit"
+                    />
+                    <label
+                      class="flex-1 py-4 lg:py-7 pl-4 hover:cursor-pointer border-b"
+                      for="credit-debit"
+                    >
+                      <div class="flex items-center gap-8">
+                        <span class="text-lg">Credit or Debit Card</span
+                        ><i class="fa-regular fa-credit-card text-3xl"></i>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="flex items-center pl-[1.5rem]">
+                    <input
+                      class="relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:opacity-0 after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary"
+                      type="radio"
+                      name="flexRadioDefault"
+                      id="googlepay"
+                    />
+                    <label
+                      class="flex-1 py-4 lg:py-7 pl-4 hover:cursor-pointer border-b"
+                      for="googlepay"
+                    >
+                      <div class="flex items-center gap-8">
+                        <span class="text-lg"> Google Pay</span
+                        ><i class="fa-brands fa-google-pay text-4xl"></i>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="flex items-center pl-[1.5rem]">
+                    <input
+                      class="relative float-left -ml-[1.5rem] mr-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:opacity-0 after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer focus:shadow-none focus:outline-none focus:ring-0 checked:focus:border-primary"
+                      type="radio"
+                      name="flexRadioDefault"
+                      id="applepay"
+                    />
+                    <label
+                      class="flex-1 py-4 lg:py-7 pl-4 hover:cursor-pointer border-b"
+                      for="applepay"
+                    >
+                      <div class="flex items-center gap-8">
+                        <span class="text-lg"> Apple Pay</span
+                        ><i class="fa-brands fa-apple-pay text-4xl"></i>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+                <div
+                  class="mt-4 lg:mt-8 pb-8 md:pb-12 lg:pb-16 xl:pb-20 border-b"
+                >
+                  <h2 class="font-semibold text-2xl md:text-3xl text-secondary">
+                    Total Payable: AED 340
+                  </h2>
+                  <p>
+                    You will get exclusive access to insider only deals,
+                    personalised offers and updates. You can unsubscribe
+                    anytime.
+                  </p>
+                </div>
+                <div class="block pl-4 py-2 mb-10">
+                  <input
+                    class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none border-[0.125rem] border-solid border-neutral-300 outline-none checked:border-primary checked:bg-primary checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer focus:shadow-none focus:transition-[border-color_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent"
+                    type="checkbox"
+                    value=""
+                    id="checkboxDefault"
+                  />
+                  <label
+                    class="inline-block pl-4 hover:cursor-pointer"
+                    for="checkboxDefault"
+                  >
+                    By clicking 'Confirm & pay' you agree to our general terms
+                    and privacy policy
+                  </label>
+                </div>
+                <button
+                  class="bg-secondary hover:bg-primary transition-all ease-in-out duration-300 text-white font-light px-12 py-3 rounded-lg"
+                >
+                  Confirm & Pay
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-2">
+            <div
+              class="sticky top-22 p-9 px-6 border border-gray-400 rounded-xl"
+            >
+              <div class="grid grid-cols-2 gap-2">
+                <h4 class="text-xl mt-4">Parasailing Adventure in Dubai</h4>
+                <img
+                  src="./assets/images/detailimg/bright-baloon-color-colorful-heat.jpg"
+                  alt="Product Image"
+                  class="rounded-lg"
+                />
+              </div>
+              <div
+                class="mt-10 flex justify-between items-center pb-8 border-b"
+              >
+                <div class="flex items-center gap-2">
+                  <span><i class="fa-regular fa-calendar"></i></span>
+                  <span class="date">Sat, Jul 15, 2023, 10:00 AM</span>
+                </div>
+                <button class="text-blue-500 hover:text-primary">Modify</button>
+              </div>
+              <div class="pt-4 mb-8">
+                <div class="flex items-center mb-2">
+                  <i class="fa-solid fa-check text-green-500"></i>
+                  <span class="ml-4">Free Cancellation</span>
+                </div>
+                <div class="flex items-center mb-2">
+                  <i class="fa-solid fa-check text-green-500"></i>
+                  <span class="ml-4">No additional fees</span>
+                </div>
+              </div>
+              <div
+                class="py-5 flex justify-between items-center border-t border-b"
+              >
+                <div class="flex items-center">
+                  <span class="passengernumber">1</span>
+                  <span><i class="fa-solid fa-xmark text-sm"></i></span>
+                  <span class="passandertype">Adult</span>
+                </div>
+                <div class="price">AED 340</div>
+              </div>
+              <div class="flex justify-between items-center py-8 border-b">
+                <h3 class="text-xl text-secondary font-semibold">
+                  Total Payable
+                </h3>
+                <h3 class="text-xl text-secondary font-semibold">AED 340</h3>
+              </div>
+              <div>
+                <p class="mt-2 mb-8">
+                  By clicking 'Confirm & pay' you agree to our general terms and
+                  privacy policy
+                </p>
+                <button
+                  class="w-full bg-secondary hover:bg-primary transition-all ease-in-out duration-300 text-white font-light px-12 py-3 rounded-lg"
+                >
+                  Confirm & Pay
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative">
+      <div>
+        <!-- ====== Footer Section Start -->
+        <footer class="relative z-10 bg-bg_gray pt-20 lg:pt-24 leading-none">
+          <div class="container">
+            <div class="text-xs md:text-md 2xl:text-lg leading-6">
+              <div class="-mx-4 flex flex-wrap">
+                <div class="px-4 w-full md:w-2/3 lg:w-4/12">
+                  <div class="mb-10 w-full">
+                    <div
+                      class="footerBook col-span-2 md:col-span-1 pl-0 xl:pl-20"
+                    >
+                      <h3
+                        class="text-secondary text-lg 2xl:text-lg font-semibold mb-5 whitespace-nowrap"
+                      >
+                        Book your Activities
+                      </h3>
+                      <ul class="">
+                        <li><a href="">info@bookyouractivities.com</a></li>
+                        <li><a href="">+971 566 922 440</a></li>
+                        <li>
+                          <div class="socialIcons">
+                            <span class="socialCircle"
+                              ><a href=""
+                                ><i class="fa-brands fa-instagram fa-sm"></i></a
+                            ></span>
+                            <span class="socialCircle"
+                              ><a href=""
+                                ><i
+                                  class="fa-brands fa-linkedin-in fa-sm"
+                                ></i></a
+                            ></span>
+                            <span class="socialCircle"
+                              ><a href=""
+                                ><i
+                                  class="fa-brands fa-facebook-f fa-sm"
+                                ></i></a
+                            ></span>
+                            <span class="socialCircle"
+                              ><a href=""
+                                ><i class="fa-brands fa-twitter fa-sm"></i></a
+                            ></span>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="px-4 w-1/2 md:w-1/3 lg:w-2/12">
+                  <div class="mb-10 w-full">
+                    <div class="footerAbout">
+                      <h3
+                        class="text-secondary text-lg 2xl:text-lg font-semibold mb-5"
+                      >
+                        About
+                      </h3>
+                      <ul class="">
+                        <li><a href="">Company</a></li>
+                        <li><a href="">Career</a></li>
+                        <li><a href="">How it works</a></li>
+                        <li><a href="">Partners</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="px-4 w-1/2 md:w-1/3 lg:w-2/12">
+                  <div class="mb-10 w-full">
+                    <div class="footerEmirates">
+                      <h3
+                        class="text-secondary text-lg 2xl:text-lg font-semibold mb-5"
+                      >
+                        Emirates
+                      </h3>
+                      <ul class="">
+                        <li><a href="">Abu Dhabi</a></li>
+                        <li><a href="">Dubai</a></li>
+                        <li><a href="">Sharjah</a></li>
+                        <li><a href="">Ajman</a></li>
+                        <li><a href="">Fujairah</a></li>
+                        <li><a href="">RAK</a></li>
+                        <li><a href="">UMQ</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="px-4 w-1/2 md:w-1/3 lg:w-2/12">
+                  <div class="mb-10 w-full">
+                    <div class="footerActivities">
+                      <h3
+                        class="text-secondary text-lg 2xl:text-lg font-semibold mb-5"
+                      >
+                        Activities
+                      </h3>
+                      <ul class="">
+                        <li><a href="">Kayak </a></li>
+                        <li><a href="">Jet Ski </a></li>
+                        <li><a href="">Sea Walking </a></li>
+                        <li><a href="">Flyboard Flying </a></li>
+                        <li><a href="">Freediving </a></li>
+                        <li><a href="">Snuba Diving</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="px-4 w-1/2 md:w-1/3 lg:w-2/12">
+                  <div class="mb-10 w-full">
+                    <div class="footerLegal">
+                      <h3
+                        class="text-secondary text-lg 2xl:text-lg font-semibold mb-5"
+                      >
+                        Legal
+                      </h3>
+                      <ul class="lg:whitespace-nowrap">
+                        <li><a href="">Terms & Conditions </a></li>
+                        <li><a href="">Privacy Policy </a></li>
+                        <li><a href="">Cancellation Policy </a></li>
+                        <li><a href="">Refund Policy </a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <section class="relative copyright pb-10">
+              <div class="">
+                <div
+                  class="inline-grid grid-cols-1 sm:grid-cols-2 w-full text-secondary mt-5"
+                >
+                  <div
+                    class="flex items-center justify-center sm:justify-start"
+                  >
+                    <p class="mb-2 text-center lg:text-left text-xs md:text-md">
+                      Copyright © Boya. All Rights Reserved.
+                    </p>
+                  </div>
+                  <div class="flex items-center justify-center md:justify-end">
+                    <p
+                      class="flex items-center justify-center text-xs sm:text-md"
+                    >
+                      Designed with
+                      <span class="px-1"
+                        ><i
+                          class="fa-solid fa-heart"
+                          style="color: var(--red)"
+                        ></i
+                      ></span>
+                      <a href="#">Fifth Designs</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </footer>
+        <!-- ====== Footer Section End -->
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+    <script src="assets/js/lightboxed/lightboxed.js"></script>
+    <script src="assets/js/megamenu.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+      function decreaseCount(countId) {
+        var countElement = document.getElementById(countId);
+        var count = parseInt(countElement.innerText);
+        if (count > 0) {
+          countElement.innerText = count - 1;
+          updateTotalCount();
+        }
+      }
+
+      function increaseCount(countId) {
+        var countElement = document.getElementById(countId);
+        var count = parseInt(countElement.innerText);
+        countElement.innerText = count + 1;
+        updateTotalCount();
+      }
+
+      function updateTotalCount() {
+        var adultCount1 = parseInt(
+          document.getElementById("adultCount1").innerText
+        );
+        var childCount1 = parseInt(
+          document.getElementById("childCount1").innerText
+        );
+        var totalCount1 = adultCount1 + childCount1;
+        document.getElementById("totalCount1").innerText = totalCount1;
+
+        var adultCount2 = parseInt(
+          document.getElementById("adultCount2").innerText
+        );
+        var childCount2 = parseInt(
+          document.getElementById("childCount2").innerText
+        );
+        var totalCount2 = adultCount2 + childCount2;
+        document.getElementById("totalCount2").innerText = totalCount2;
+      }
+    </script>
+  </body>
+</html>
