@@ -332,7 +332,7 @@ $('.moreless-button').click(function () {
 });
 
 $("#promobtn").click(function () {
-  $(".promobox").css("display", "flex");;
+  $(".promobox").toggle(300);;
 });
 
 // dropdown custom
