@@ -321,7 +321,15 @@ document.addEventListener("click", function (event) {
   }
 });
 
-
+$('.moreless-button').click(function () {
+  console.log("button click")
+  $('.moretext').slideToggle();
+  if ($('.moreless-button').text() == "See more") {
+    $(this).text("See less")
+  } else {
+    $(this).text("See more")
+  }
+});
 
 $("#promobtn").click(function () {
   $(".promobox").css("display", "flex");;
@@ -391,12 +399,5 @@ $("select").niceSelect();
 
 // read more
 
-$('.moreless-button').click(function () {
-  $('.moretext').slideToggle();
-  if ($('.moreless-button').text() == "See more") {
-    $(this).text("See less")
-  } else {
-    $(this).text("See more")
-  }
-});
+
 
