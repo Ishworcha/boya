@@ -1,5 +1,6 @@
 .nice-select,
-.listingdropdownbtn {
+.listingdropdownbtn,
+.packagetypelist {
   -webkit-tap-highlight-color: transparent;
   background-color: #fff;
   border-radius: 12px;

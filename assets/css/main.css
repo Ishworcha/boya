@@ -1081,11 +1081,16 @@ footer ul > li > a:hover {
   height: 42px;
 }
 
-.detailDropdown .listingSelect .nice-select {
+.detailDropdown .listingSelect .nice-select,
+.detailDropdown .packagetypeWrap .packagetypelist {
   width: 100%;
   background-color: #bbdbe1;
   font-family: var(--latoLight);
   border: none;
+}
+
+.detailDropdown .packagetypeWrap .packagetypelist {
+  width: auto;
 }
 
 .detailDropdown .filterdropdown input.text-box {
