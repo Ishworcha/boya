@@ -1181,7 +1181,7 @@ footer ul > li > a:hover {
 }
 
 @media screen and (max-width: 640px) {
-  ::-webkit-scrollbar {
+  .boyatags::-webkit-scrollbar {
     display: none;
   }
   #sportSlider {
