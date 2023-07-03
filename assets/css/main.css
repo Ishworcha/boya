@@ -1283,6 +1283,11 @@ footer ul > li > a:hover {
   .detailDropdown .listingSelect {
     width: 100%;
   }
+
+  .totalPerson .dropdownlist {
+    left: inherit;
+    right: 0;
+  }
 }
 
 /* min */
