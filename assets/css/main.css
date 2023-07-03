@@ -1262,6 +1262,10 @@ footer ul > li > a:hover {
   .gallery_slider img {
     height: 100px;
   }
+  .totalPerson .dropdownlist {
+    left: inherit;
+    right: 0;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -1285,11 +1289,6 @@ footer ul > li > a:hover {
 
   .detailDropdown .listingSelect {
     width: 100%;
-  }
-
-  .totalPerson .dropdownlist {
-    left: inherit;
-    right: 0;
   }
 }
 
