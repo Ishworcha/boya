@@ -389,3 +389,14 @@ document.addEventListener("click", function (event) {
 
 $("select").niceSelect();
 
+// read more
+
+$('.moreless-button').click(function () {
+  $('.moretext').slideToggle();
+  if ($('.moreless-button').text() == "See more") {
+    $(this).text("See less")
+  } else {
+    $(this).text("See more")
+  }
+});
+

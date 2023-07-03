@@ -203,6 +203,10 @@ nav.navbar-solid ul > li > .nav-link:hover {
   color: var(--primary);
 }
 
+.moretext {
+  display: none;
+}
+
 /* Hamburger */
 
 .mobile-menu {
