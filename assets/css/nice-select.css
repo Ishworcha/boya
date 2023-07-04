@@ -243,6 +243,22 @@
   transform: rotate(-135deg);
 }
 
+.date-picker.datepicker_btn .dateinput {
+  background: transparent;
+  border: none;
+  height: auto;
+  line-height: 1.4;
+  padding: 0;
+}
+
+.date-picker.datepicker_btn .dateinput .dateresult {
+  color: #fff;
+}
+
+.date-picker.datepicker_btn .dateinput .dateresult:after {
+  display: none;
+}
+
 @media screen and (max-width: 640px) {
   .search_dropdown .nice-select:after {
     margin-top: -18px;

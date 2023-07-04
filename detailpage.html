@@ -246,22 +246,16 @@
               </div>
               <div class="detailDropdown mb-4">
                 <label class="block mb-2 text-sm">Please select an activity date</label>
-                <div class="flex flex-wrap sm:flex-nowrap items-center gap-2 w-full xs:w-1/2">
-                <button
-                class="text-sm xs:text-base w-full bg-secondary hover:bg-primary transition-all ease-in-out duration-300 text-white font-light px-12 py-3 rounded-lg whitespace-nowrap"
+                <button id="datepicker"
+                class="date-picker datepicker_btn text-sm xs:text-base bg-secondary hover:bg-primary transition-all ease-in-out duration-300 text-white font-light px-12 py-3 rounded-lg whitespace-nowrap"
               >
               <div class="flex items-center justify-center gap-2">
               <span><i class="fa-regular fa-calendar-days"></i></span>
-              <span>Check availability</span>
+              <div class="dateinput" id="dateinput">
+                <div class="dateresult"><span>Check Availability</span></div>
+              </div>
+              <div class="calendar" id="calendar"></div>
               </button>
-              <button
-              class="text-sm xs:text-base w-full bg-secondary hover:bg-primary transition-all ease-in-out duration-300 text-white font-light px-12 py-3 rounded-lg whitespace-nowrap"
-            >
-            <div class="flex items-center justify-center gap-2">
-            <span><i class="fa-regular fa-calendar-days"></i></span>
-            <span>16 june, 2023</span>
-            </button>
-            </div>
               </div>
               <div class="detailDropdown mb-4">
                 <label class="block mb-2 text-sm">Please select a time</label>
