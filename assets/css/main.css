@@ -617,7 +617,7 @@ footer ul > li > a:hover {
   opacity: 1;
 }
 
-.text {
+.exploreCard .text {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1025,6 +1025,45 @@ footer ul > li > a:hover {
   opacity: 1;
 }
 
+/* price range */
+
+.slider-box .slider.ui-widget.ui-widget-content {
+  border: none;
+  background: #e6e6e6;
+}
+
+.slider-box .slider.ui-slider-horizontal {
+  height: 4px;
+}
+
+.slider-box .slider .ui-widget-header {
+  background: var(--primary);
+}
+
+.slider-box .slider .ui-state-default,
+.slider-box .slider .ui-widget-content .ui-state-default,
+.slider-box .slider .ui-widget-header .ui-state-default,
+.slider-box .slider .ui-button,
+html .slider-box .slider .ui-button.ui-state-disabled:hover,
+html .slider-box .slider .ui-button.ui-state-disabled:active {
+  border: 1px solid var(--primary);
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+.slider-box .slider.ui-slider .ui-slider-handle {
+  width: 24px;
+  height: 24px;
+}
+
+.slider-box .slider.ui-slider-horizontal .ui-slider-handle {
+  top: -10px;
+}
+
+.slider-box .price-range-display {
+  width: 100%;
+}
+
 /* detail page */
 
 .gallery_slider img:nth-of-type(1n + 4) {
@@ -1321,37 +1360,4 @@ footer ul > li > a:hover {
     font-size: 15px;
     margin-bottom: 0.5em;
   }
-}
-
-.slider-box .slider.ui-widget.ui-widget-content {
-  border: none;
-  background: #e6e6e6;
-}
-
-.slider-box .slider.ui-slider-horizontal {
-  height: 4px;
-}
-
-.slider-box .slider .ui-widget-header {
-  background: var(--primary);
-}
-
-.slider-box .slider .ui-state-default,
-.slider-box .slider .ui-widget-content .ui-state-default,
-.slider-box .slider .ui-widget-header .ui-state-default,
-.slider-box .slider .ui-button,
-html .slider-box .slider .ui-button.ui-state-disabled:hover,
-html .slider-box .slider .ui-button.ui-state-disabled:active {
-  border: 1px solid var(--primary);
-  background: #ffffff;
-  border-radius: 50%;
-}
-
-.slider-box .slider.ui-slider .ui-slider-handle {
-  width: 24px;
-  height: 24px;
-}
-
-.slider-box .slider.ui-slider-horizontal .ui-slider-handle {
-  top: -10px;
 }
