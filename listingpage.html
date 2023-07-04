@@ -530,9 +530,12 @@
                       type="text"
                       id="priceRange"
                       readonly
-                      class="text-sm uppercase"
+                      class="text-sm uppercase price-range-display"
                     />
-                    <div id="price-range" class="slider mt-4"></div>
+                    <div
+                      id="price-range"
+                      class="slider mt-4 price-range-slider"
+                    ></div>
                   </div>
 
                   <div class="mt-8 flex justify-end items-center gap-4">
@@ -1765,7 +1768,72 @@
 
     <div class="drawer drawer--right">
       <div class="drawer-nav">
-        <h2 class="text-xl lg:text-2xl">Price Range</h2>
+        <div class="mb-4">
+          <h2 class="text-xl lg:text-2xl mb-4">Categories</h2>
+          <div class="flex flex-wrap gap-2">
+            <a
+              href="#"
+              class="bg-white text-primary text-sm md:text-md h-8 w-auto px-4 rounded-customxxl flex justify-center items-center transition-all ease-in-out duration-300 outline-text_gray border hover:text-white hover:bg-primary hover:border whitespace-nowrap"
+              >Kayaking</a
+            >
+            <a
+              href="#"
+              class="bg-white text-primary text-sm md:text-md h-8 w-auto px-4 rounded-customxxl flex justify-center items-center transition-all ease-in-out duration-300 outline-text_gray border hover:text-white hover:bg-primary hover:border whitespace-nowrap"
+              >Sky Diving</a
+            >
+            <a
+              href="#"
+              class="bg-white text-primary text-sm md:text-md h-8 w-auto px-4 rounded-customxxl flex justify-center items-center transition-all ease-in-out duration-300 outline-text_gray border hover:text-white hover:bg-primary hover:border whitespace-nowrap"
+              >Jet Sking</a
+            >
+            <a
+              href="#"
+              class="bg-white text-primary text-sm md:text-md h-8 w-auto px-4 rounded-customxxl flex justify-center items-center transition-all ease-in-out duration-300 outline-text_gray border hover:text-white hover:bg-primary hover:border whitespace-nowrap"
+              >Boat Rentals</a
+            >
+            <a
+              href="#"
+              class="bg-white text-primary text-sm md:text-md h-8 w-auto px-4 rounded-customxxl flex justify-center items-center transition-all ease-in-out duration-300 outline-text_gray border hover:text-white hover:bg-primary hover:border whitespace-nowrap"
+              >Speed Boats</a
+            >
+            <a
+              href="#"
+              class="bg-white text-primary text-sm md:text-md h-8 w-auto px-4 rounded-customxxl flex justify-center items-center transition-all ease-in-out duration-300 outline-text_gray border hover:text-white hover:bg-primary hover:border whitespace-nowrap"
+              >Snorkeling</a
+            >
+            <a
+              href="#"
+              class="bg-white text-primary text-sm md:text-md h-8 w-auto px-4 rounded-customxxl flex justify-center items-center transition-all ease-in-out duration-300 outline-text_gray border hover:text-white hover:bg-primary hover:border whitespace-nowrap"
+              >Efoil</a
+            >
+            <a
+              href="#"
+              class="bg-white text-primary text-sm md:text-md h-8 w-auto px-4 rounded-customxxl flex justify-center items-center transition-all ease-in-out duration-300 outline-text_gray border hover:text-white hover:bg-primary hover:border whitespace-nowrap"
+              >Flyboard</a
+            >
+          </div>
+        </div>
+        <div>
+          <h2 class="text-xl lg:text-2xl">Price Range</h2>
+          <div class="slider-box">
+            <input
+              type="text"
+              id="priceRange"
+              readonly
+              class="text-sm uppercase price-range-display"
+            />
+            <div id="price-range" class="slider mt-4 price-range-slider"></div>
+          </div>
+
+          <div class="mt-8 flex justify-end items-center gap-4">
+            <button class="text-primary hover:text-secondary">Reset</button>
+            <button
+              class="flex justify-center items-center w-22 h-9 bg-primary transition-all ease-in-out duration-300 border border-primary hover:border-0 rounded-customsm text-white hover:bg-secondary hover:border-secondary"
+            >
+              Ok
+            </button>
+          </div>
+        </div>
       </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

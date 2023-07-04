@@ -207,18 +207,37 @@ $('.button-group').each(function (i, buttonGroup) {
 // price range
 
 $(function () {
-  $("#price-range").slider({
-    step: 500,
-    range: true,
-    min: 0,
-    max: 3000,
-    values: [0, 20000],
-    slide: function (event, ui) {
-      $("#priceRange").val("AED " + ui.values[0] + " - AED " + ui.values[1] + "+");
-    }
+  $(".price-range-slider").each(function () {
+    var $slider = $(this);
+    var $display = $slider.siblings(".price-range-display");
+
+    $slider.slider({
+      step: 500,
+      range: true,
+      min: 0,
+      max: 3000,
+      values: [0, 2000],
+      slide: function (event, ui) {
+        $display.val("AED " + ui.values[0] + " - AED " + ui.values[1] + "+");
+      }
+    });
+
+    var initialValues = $slider.slider("option", "values");
+    $display.val(
+      "AED " +
+      initialValues[0] +
+      " - AED " +
+      initialValues[1] +
+      "+"
+    );
+
+    $slider.on("slidechange", function (event, ui) {
+      $display.val("AED " + ui.values[0] + " - AED " + ui.values[1] + "+");
+    });
   });
-  $("#priceRange").val("AED " + $("#price-range").slider("values", 0) + " - AED " + $("#price-range").slider("values", 1) + "+");
 });
+
+
 
 $(".drawer").drawer();
 
@@ -290,8 +309,6 @@ $(function () {
     dateFormat: 'dd/mm/yy',
     firstDay: 1,
     showOn: 'focus',
-    showButtonPanel: true,
-    closeText: 'Reset', // Text to show for "close" button
   });
 
   $(document).on('click', '.date-picker .dateinput', function (e) {
