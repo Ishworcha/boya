@@ -312,7 +312,6 @@ $(function () {
   $(".calendar").datepicker({
     dateFormat: 'dd/mm/yy',
     firstDay: 1,
-    showOn: 'focus',
   });
 
   $(document).on('click', '.date-picker .dateinput', function (e) {
