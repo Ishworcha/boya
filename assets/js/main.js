@@ -309,9 +309,11 @@ jQuery('#showWholeLightboxButton').click(function () {
 // });
 
 $(function () {
-  $(".calendar").datepicker({
-    dateFormat: 'dd/mm/yy',
-    firstDay: 1,
+  $(".calendar").each(function () {
+    $(this).datepicker({
+      dateFormat: 'dd/mm/yy',
+      firstDay: 1,
+    });
   });
 
   $(document).on('click', '.date-picker .dateinput', function (e) {
@@ -320,26 +322,21 @@ $(function () {
     $parent.toggleClass('open');
   });
 
-
   $(".calendar").on("change", function () {
     var $me = $(this),
       $selected = $me.val(),
       $parent = $me.parents('.date-picker');
     $parent.find('.dateresult').children('span').html($selected);
   });
+
+  $(document).on("click", function (event) {
+    var $dropdownMenus = $(".date-picker");
+    if (!$dropdownMenus.is(event.target) && $dropdownMenus.has(event.target).length === 0) {
+      $dropdownMenus.removeClass("open");
+    }
+  });
 });
 
-document.addEventListener("click", function (event) {
-  var dropdownMenu1 = document.getElementById("datepicker");
-  var dropdownToggle1 = document.getElementById("calendar");
-
-  if (
-    !dropdownToggle1.contains(event.target) &&
-    !dropdownMenu1.contains(event.target)
-  ) {
-    dropdownMenu1.classList.remove("open");
-  }
-});
 
 $('.moreless-button').click(function () {
   console.log("button click")

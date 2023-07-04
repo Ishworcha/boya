@@ -1025,6 +1025,22 @@ footer ul > li > a:hover {
   opacity: 1;
 }
 
+.filter-datepicker.date-picker .dateinput {
+  width: auto;
+  border-radius: 5rem;
+  height: 36px;
+  line-height: 1.4;
+}
+
+.filter-datepicker.date-picker .dateinput .dateresult:after {
+  display: none;
+}
+
+.date-picker .dateinput .dateresult {
+  color: var(--primary);
+  font-size: 14px;
+}
+
 /* price range */
 
 .slider-box .slider.ui-widget.ui-widget-content {
