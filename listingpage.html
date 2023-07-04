@@ -1813,8 +1813,21 @@
             >
           </div>
         </div>
+        <div class="mb-4">
+          <h2 class="text-xl lg:text-2xl mb-4">Participation Date</h2>
+          <button id="datepicker"
+                class="date-picker datepicker_btn text-sm xs:text-base bg-secondary hover:bg-primary transition-all ease-in-out duration-300 text-white font-light px-12 py-3 rounded-lg whitespace-nowrap"
+              >
+              <div class="flex items-center justify-center gap-2">
+              <span><i class="fa-regular fa-calendar-days"></i></span>
+              <div class="dateinput" id="dateinput">
+                <div class="dateresult"><span>Select Date</span></div>
+              </div>
+              <div class="calendar" id="calendar"></div>
+              </button>
+        </div>
         <div>
-          <h2 class="text-xl lg:text-2xl">Price Range</h2>
+          <h2 class="text-xl lg:text-2xl mb-4">Price Range</h2>
           <div class="slider-box">
             <input
               type="text"
@@ -1838,6 +1851,7 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
     <script src="assets/js/jquery.nice-select.js"></script>

@@ -216,7 +216,7 @@ $(function () {
       range: true,
       min: 0,
       max: 3000,
-      values: [0, 2000],
+      values: [0, 3000],
       slide: function (event, ui) {
         $display.val("AED " + ui.values[0] + " - AED " + ui.values[1] + "+");
       }
@@ -231,11 +231,15 @@ $(function () {
       "+"
     );
 
-    $slider.on("slidechange", function (event, ui) {
-      $display.val("AED " + ui.values[0] + " - AED " + ui.values[1] + "+");
+    // Enable touch support for the slider range
+    $slider.slider("instance")._trigger("create", null, {
+      draggable: true
     });
   });
 });
+
+
+
 
 
 
