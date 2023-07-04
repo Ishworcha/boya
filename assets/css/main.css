@@ -1138,6 +1138,21 @@ footer ul > li > a:hover {
 }
 
 @media screen and (max-width: 768px) {
+  .exploreCard img.exploreCard1 {
+    min-height: 150px;
+  }
+
+  .exploreCard img.exploreCard2 {
+    min-height: 150px;
+  }
+
+  .exploreCard .text {
+    position: relative;
+    top: inherit;
+    left: inherit;
+    transform: none;
+    color: #000;
+  }
   #sportSlider .slick-slide {
     margin: 0 8px;
   }
@@ -1279,16 +1294,6 @@ footer ul > li > a:hover {
 }
 
 @media screen and (max-width: 480px) {
-  .exploreCard img.exploreCard1 {
-    min-height: 80px;
-    border-radius: 7px;
-  }
-
-  .exploreCard img.exploreCard2 {
-    min-height: 160px;
-    border-radius: 7px;
-  }
-
   .gallery_slider img:first-child {
     height: 188px;
   }
