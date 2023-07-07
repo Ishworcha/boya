@@ -181,9 +181,28 @@ var filterFns = {
 };
 
 // bind filter button click
+// $('#filters').on('click', 'button', function () {
+//   $('#filter button.active').removeClass('active');
+//   $(this).addClass('active');
+//   var filterValue = $(this).attr('data-filter');
+//   filterValue = filterFns[filterValue] || filterValue;
+//   $grid.isotope({ filter: filterValue });
+// });
+
+
 $('#filters').on('click', 'button', function () {
+  var clickedButton = $(this);
   var filterValue = $(this).attr('data-filter');
-  // use filterFn if matches value
+  // Check if the clicked button already has the "active" class
+  if (clickedButton.hasClass('active')) {
+    clickedButton.removeClass('active');
+  } else {
+    // Remove "active" class from all filter buttons
+    $('#filters button').removeClass('active');
+
+    // Add "active" class to the clicked button
+    clickedButton.addClass('active');
+  }
   filterValue = filterFns[filterValue] || filterValue;
   $grid.isotope({ filter: filterValue });
 });

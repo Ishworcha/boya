@@ -574,6 +574,12 @@ footer ul > li > a:hover {
 
 /* explorecard */
 
+#filters button.active {
+  background-color: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
 .exploreCard {
   position: relative;
   display: inline-block;
@@ -1193,6 +1199,17 @@ html .slider-box .slider .ui-button.ui-state-disabled:active {
 }
 
 @media screen and (max-width: 768px) {
+  .overlay {
+    position: relative;
+    top: inherit;
+    left: inherit;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    border-radius: 0;
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+  }
   .exploreCard img.exploreCard1 {
     min-height: 150px;
   }
