@@ -1278,6 +1278,9 @@ html .slider-box .slider .ui-button.ui-state-disabled:active {
 }
 
 @media screen and (max-width: 640px) {
+  .slick-slider .slide-item .relative {
+    max-height: 50vh;
+  }
   .boyatags::-webkit-scrollbar {
     display: none;
   }
