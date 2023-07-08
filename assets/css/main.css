@@ -1170,6 +1170,10 @@ html .slider-box .slider .ui-button.ui-state-disabled:active {
   border-right: 2px solid #bbdbe1;
 }
 
+.ticketnumber {
+  display: none;
+}
+
 @media screen and (max-width: 1024px) {
   .exploreCard img.exploreCard1 {
     min-height: 150px;

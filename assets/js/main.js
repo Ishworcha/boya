@@ -292,6 +292,13 @@ jQuery('#showWholeLightboxButton').click(function () {
   });
 })(jQuery);
 
+$(function () {
+  $('#timeSelect').change(function () {
+    $('.ticketnumber').hide();
+    $('#' + $(this).val()).show();
+  });
+});
+
 // datepicker
 
 // $(function () {
